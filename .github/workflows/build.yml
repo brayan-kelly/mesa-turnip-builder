@@ -45,7 +45,7 @@ jobs:
 
       - name: Build Mesa Turnip packages
         env:
-          MESA_TAG: ${{ startsWith(github.ref, 'refs/tags/mesa-') && github.ref_name || 'mesa-26.2.0' }}
+          MESA_TAG: ${{ startsWith(github.ref, 'refs/tags/mesa-') && github.ref_name || 'mesa-26.2.1' }}
           PACKAGE_NAME: Mesa-Turnip-AdrenoTools
           MAGISK_VULKAN_FILENAME: vulkan.adreno.so
         run: |
