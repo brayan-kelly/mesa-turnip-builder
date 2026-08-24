@@ -136,11 +136,7 @@ cat > "$PACKAGE_DIR/meta.json" <<EOF
   "author": "Mesa Project",
   "packageVersion": "1",
   "vendor": "Mesa",
-  "driverVersion": "Mesa $MESA_VERSION",
-  "mesaTag": "$MESA_TAG",
-  "mesaCommit": "$MESA_COMMIT",
-  "apiLevel": $API_LEVEL,
-  "androidNdk": "r29",
+  "driverVersion": "$MESA_VERSION",
   "minApi": 28,
   "libraryName": "libvulkan_freedreno.so"
 }
