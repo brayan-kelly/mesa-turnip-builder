@@ -9,7 +9,6 @@ on:
 permissions:
   contents: write
   pull-requests: write
-  workflows: write
 
 concurrency:
   group: mesa-update
@@ -67,7 +66,7 @@ jobs:
         id: pr
         uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.MESA_UPDATE_TOKEN }}
           branch: automation/mesa-update
           delete-branch: true
           commit-message: "chore: update Mesa baseline to ${{ steps.mesa.outputs.latest }}"
