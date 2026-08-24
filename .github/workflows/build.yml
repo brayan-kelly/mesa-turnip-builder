@@ -96,8 +96,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          release_version="${GITHUB_REF_NAME#mesa-}"
           gh release create "$GITHUB_REF_NAME" \
             --repo "$GITHUB_REPOSITORY" \
-            --title "Mesa Turnip Android Driver Pack $GITHUB_REF_NAME" \
+            --title "Mesa Turnip $release_version" \
             --notes-file /tmp/mesa-turnip-notes.md \
             release-assets/*
