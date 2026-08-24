@@ -1,5 +1,7 @@
 # Mesa Turnip Android Builder
 
+[![Build Mesa Turnip driver](https://github.com/brayan-kelly/mesa-turnip-builder/actions/workflows/build.yml/badge.svg)](https://github.com/brayan-kelly/mesa-turnip-builder/actions/workflows/build.yml)
+
 GitHub Actions project for building the latest official stable Mesa Turnip Vulkan driver for Android ARM64 devices using the KGSL backend.
 
 The build selects the newest final `mesa-X.Y.Z` tag from upstream Mesa at runtime. Release candidates, beta tags, development branches, and external patch sets are excluded.
