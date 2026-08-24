@@ -77,5 +77,5 @@ jobs:
       - name: Enable auto-merge
         if: steps.pr.outputs.pull-request-number != ''
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.MESA_UPDATE_TOKEN }}
         run: gh pr merge --auto --squash "${{ steps.pr.outputs.pull-request-number }}" --repo "$GITHUB_REPOSITORY"
