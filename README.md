@@ -137,6 +137,28 @@ one day. It does not install or switch driver modules.
 
 A successful compilation does not guarantee that a driver will initialize on every Qualcomm device. Compatibility depends on the GPU ID, Android version, KGSL implementation, firmware, loader, and the upstream Mesa release.
 
+### Maintainer test hardware
+
+The author tests driver builds on a Konkr Pocket FIT. The device information
+below was collected from the test unit:
+
+| Property | Value |
+| --- | --- |
+| Device | Konkr Pocket FIT |
+| Platform | Qualcomm Snapdragon G3 Gen 3 Gaming Platform |
+| Official GPU branding | Qualcomm Adreno A33 |
+| KGSL GPU model | `Adreno33v2` |
+| Android | Android 14, API level 34 |
+| Runtime GLES renderer | Qualcomm Adreno (TM) 750, OpenGL ES 3.2 |
+| Qualcomm driver build | `V@0762.24`, build `43c70540de` |
+| Vulkan HALs | `vulkan.adreno.so`, `vulkan.pastel.so` |
+| KGSL GPU ID | Not exposed by this firmware |
+
+Android reports `Adreno 750` through the runtime GLES renderer while the
+official platform documentation identifies the GPU as Adreno A33 and KGSL
+reports `Adreno33v2`. These are device-backed reference results and do not
+guarantee compatibility with other Adreno devices.
+
 Before testing on a rooted development device, record:
 
 ```bash
