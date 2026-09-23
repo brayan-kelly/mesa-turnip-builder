@@ -46,7 +46,7 @@ jobs:
           printf '%s\n' "$RELEASE_GPG_PRIVATE_KEY" | gpg --batch --import
 
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email "11398943+brayan-kelly@users.noreply.github.com"
           git tag -s --local-user "$RELEASE_GPG_KEY_ID" "$mesa_tag" \
             "$GITHUB_SHA" -m "release Mesa Turnip $mesa_tag"
           git tag -v "$mesa_tag"
